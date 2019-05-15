@@ -1,0 +1,67 @@
+.overlay
+	position: fixed
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: 3
+	background-color: rgba(#f3f3f9,.8)
+	.popup-closemob
+		display: none
+	.popup
+		position: fixed
+		left: 50vw
+		top: 50vh
+		transform: translate(-50%, -50%)
+		width: 408px
+		&-close
+			position: absolute
+			right: -64px
+			top: -78px
+			font-size: 50px
+			font-weight: 300
+			cursor: pointer
+			color: #c5c6cc
+			transition: all .3s
+			&:hover
+				color: #3a3f5c
+		&-form
+			background-color: #fff
+			padding: 57px 57px 60px 57px
+			text-align: center
+			&-header
+				color: #3a3f5c
+				font-family: "museo_sans_cyrl500"
+				font-size: 22px
+				line-height: 24px
+				span
+					display: block
+					font-family: "museo_sans_cyrl300"
+					font-size: 16px
+					color: #acadb6
+			&__input
+				width: 295px
+				height: 44px
+				margin-top: 24px
+				box-sizing: border-box
+				margin-bottom: 12px
+				color: #acadb6
+				font-family: "museo_sans_cyrl300"
+				font-size: 12px
+				&:active
+					outline: none
+				&::placeholder
+					color: #acadb6
+					font-family: "museo_sans_cyrl300"
+					font-size: 12px
+					margin-left: 23px
+			&__btn
+				width: 295px
+				font-size: 16px
+				padding: 17px 0px
+				margin-bottom: 12px
+			&__note
+				color: #acadb6
+				font-family: "museo_sans_cyrl300"
+				font-size: 11px
+				line-height: 16px
+				text-align: left

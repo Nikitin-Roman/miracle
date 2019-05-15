@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>numbers</title>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="numbers">
+		<div class="numbers-bg">
+			<div class="numbers-bg__word">цифры</div>
+			<img class='numbers-bg__img' src="img/dots-num.png" alt="точки">
+		</div>
+		<div class="container">
+			<h2 class="numbers-title">Компания в цифрах</h2>
+			<div class="numbers-subtitle">Наши клиенты доверяют нам и поэтому зарабатывают вместе с нами</div>
+			<div class="numbers-counter">
+				<div class="numbers-counter__item">
+					<div class="numbers-counter__num spincrement">
+						2492
+					</div>
+					<div class="numbers-counter__desc">
+						постоянных<br/>
+						клиентов
+					</div>
+				</div>
+				<div class="numbers-counter__item">
+					<div class="numbers-counter__num spincrement" data-min="0" data-max="2" data-delay="30"  data-increment="2">20923</div>
+					<div class="numbers-counter__desc">
+						выполненных<br/>
+						заказов
+					</div>					
+				</div>
+				<div class="numbers-counter__item">
+					<div class="plus-block">
+						<div class="numbers-counter__num spincrement">100
+						</div><div class="numbers-counter__num ">+</div>
+					</div>
+
+					<div class="numbers-counter__desc">
+						городов России<br>
+						и стран СНГ
+					</div>					
+				</div>
+				<div class="numbers-counter__item">
+					<div class="plus-block">
+											<div class="numbers-counter__num spincrement ">50
+					</div><div class="numbers-counter__num plus">+</div>
+					</div>
+
+					<div class="numbers-counter__desc">
+						сотрудников <br/>
+						компании
+					</div>					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="securities">
+		<div class="securities-dot">
+			<img src="img/dots-num.png" alt="">
+		</div>
+		<div class="container">
+			<h2 class="securities-title">Ценные бумаги</h2>
+			<div class="securities-desc">
+			Мы одна из немногих российских компаний в Китае, имеющих лицензию на экспортно-импортную деятельность
+		  </div>
+			<div class="securities-licenses">
+					<img src="img/Bitmap1.png" alt="лицензия">
+					<img src="img/Bitmap3.png" alt="лицензия">
+					<img src="img/Bitmap2.png" alt="лицензия">
+			</div>
+		</div>
+	</section>
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	  <script src ='js/jquery.spincrement.js'></script>
+	  <script src="slick/slick.min.js"></script>
+	  <script>
+			$(document).ready(function(){
+			  var show = true;
+				var countbox = ".numbers-counter";
+				$(window).on("scroll load resize", function(){
+					if(!show) return false;                   
+					var w_top = $(window).scrollTop();        // Количество пикселей на которое была прокручена страница
+					var e_top = $(countbox).offset().top;     // Расстояние от блока со счетчиками до верха всего документа
+					var w_height = $(window).height();        // Высота окна браузера
+					var d_height = $(document).height();      // Высота всего документа
+					var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+					if(w_top + 200 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
+						$(".spincrement").spincrement({
+							thousandSeparator: " ",
+							duration: 1200
+						});
+						show = false;
+					}
+				});
+
+						  $slickGreen = false;
+						      function greenSlider(){    
+						          if($(window).width() < 991){
+						              if(!$slickGreen){
+						                  $(".securities-licenses").slick({
+															  slidesToShow: 1,
+															  slidesToScroll: 1
+						                  });
+						                  $slickGreen = true;
+						              }
+						          } else if($(window).width() > 992){
+						              if($slickGreen){
+						                  $('.securities-licenses').slick('unslick');
+						                  $slickGreen = false;
+						              }
+						          }
+						      };
+
+						      $(document).ready(function(){
+						          greenSlider();
+						      });
+						      $(window).on('resize', function(){
+						           greenSlider();
+						      });
+
+			});
+	  </script>
+</body>
+</html>	

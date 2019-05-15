@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>success</title>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="overlay-success">
+		<div class="popup-closemob">&times;<div class="popup-close-container">Закрыть</div></div>
+		<div class="popup">
+			<!-- /.popup-close -->
+			<div class="popup-cont">
+				<div class="popup-close">&times;</div>
+				<div class="popup-window">
+					<img src="img/pop-up__success/ok.png" alt="успешно отправлено">
+					<div class="popup-title">Успешно <br> отправлено</div>
+					<span>Спасибо, в ближайшее время <br> с вами свяжется наш менеджер</span>
+				</div>
+			</div>
+		</div>
+		<!-- /.popup -->
+	</div>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function() {
+				$('.popup-close').on('click', function(event) {
+					event.preventDefault();
+					$('.overlay-success').hide(300);
+					/* Act on the event */
+				});
+
+				$('.popup-closemob').on('click', function(event) {
+					event.preventDefault();
+					$('.overlay-success').hide(300);
+					/* Act on the event */
+				});
+			});
+		</script>
+</body>
+</html>

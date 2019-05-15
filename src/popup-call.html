@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>call-form</title>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="overlay">
+		<div class="popup-closemob">&times;<div class="popup-close-container">Закрыть</div></div>
+		<div class="popup">
+
+			<!-- /.popup-close -->
+			<div class="popup-form">
+				<div class="popup-close">&times;</div>
+				<form action="#" class="main-form">
+					<div class="popup-form-header">
+						<div class="popup-title">Нет возможности позвонить?</div>
+						<span>Оставьте свой свой номер телефона <br> и мы свяжемся с вами</span>
+						<input type="tel" id='phone' class="popup-form__input miracle-input error-input" name="phone" placeholder="Номер телефона" required>
+						<button class="mircl-btn popup-form__btn">
+							Перезвоните мне
+						</button>
+						<div class="popup-form__note">
+							Нажимая на кнопку «Перезвоните мне», вы даете <br> согласие на обработку своих персональных данных
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /.popup -->
+	</div>
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	  <script src="js/jquery.maskedinput.js"></script>
+	  <script>
+	  	jQuery(function($){
+	  	   $("#phone").mask("+7(999) 999-99-99");
+
+	  	   $('.popup-close').on('click', function(event) {
+	  	   	event.preventDefault();
+	  	   	$('.overlay').hide(300);
+	  	   	/* Act on the event */
+	  	   });
+
+	  	   $('.popup-closemob').on('click', function(event) {
+	  	   	event.preventDefault();
+	  	   	$('.overlay').hide(300);
+	  	   	/* Act on the event */
+	  	   });
+	  	});
+	  </script>
+</body>
+</html>

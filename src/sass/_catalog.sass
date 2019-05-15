@@ -1,0 +1,123 @@
+.overlay
+	display: none
+.catalog
+	.email-container
+		.email-form
+			form
+				display: flex
+				margin-top: 53px
+				align-items: center
+				justify-content: space-between
+				.email-text
+					color: #3a3f5c
+					font-family: "museo_sans_cyrl300"
+					font-size: 13px
+					line-height: 20px
+					margin-right: 40px
+				.email-input
+					width: 280px
+					height: 44px
+					border-radius: 1px
+					border: 1px solid #e3e3e3
+					background-color: #ffffff
+					color: #acadb6
+					font-family: "museo_sans_cyrl300"
+					font-size: 12px
+					line-height: 18px
+					margin-right: 10px
+					&::placeholder
+						color: #acadb6
+				.select-wrapper
+					background-color: #FFF
+					display: inline-block
+					position: relative
+					width: 268px
+					height: 44px
+					&:after 
+						content: ''
+						position: absolute
+						border: 5px solid transparent
+						border-top: 8px solid #3a3f5c
+						top: 23px
+						right: 9px
+						z-index: 1
+					&:before 
+						content: ''
+						position: absolute
+						border: 5px solid transparent
+						border-bottom: 8px solid #3a3f5c
+						top: 5px
+						right: 9px
+						z-index: 1
+					select
+						color: #acadb6
+						font-family: "museo_sans_cyrl300"
+						font-size: 12px
+						line-height: 18px
+						padding: 12px 0px 12px 10px
+						width: 268px
+						appearance: none
+						border: 1px solid #e3e3e3
+						background-color: transparent
+						border-radius: 0
+						position: relative
+						cursor: pointer
+						z-index: 2
+						option
+							color: #3a3f5c
+							font-size: 14px
+							line-height: 24px
+				.send-button
+					margin-left: 10px
+					width: 176px
+					height: 44px
+					border-radius: 1px
+					background-color: #81c34e
+					&:hover
+						cursor: pointer
+						background-color: #96dd60
+						outline: none
+					&:active
+						background-color: #659a3d
+						outline: none
+					&:focus
+						outline: none
+		.underform
+			float: right
+			margin-top: 13px
+			color: #acadb6
+			font-family: "museo_sans_cyrl300"
+			font-size: 11px
+			line-height: 16px
+	.call-order
+		margin-top: 67px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		&__title
+			.call-order__header
+				line-height: 24px
+				font-family: "museo_sans_cyrl500"
+				font-size: 22px
+				color: #3a3f5c
+				margin-bottom: 5px
+			span
+				font-family: "museo_sans_cyrl300"
+				color: #acadb6
+				font-size: 14px
+		&__btn
+			margin-left: 38px
+			width: 295px
+			height: 44px
+			border-radius: 1px
+			background-color: #81c34e
+			color: #ffffff
+			&:hover
+				cursor: pointer
+				background-color: #96dd60
+				outline: none
+			&:active
+				background-color: #659a3d
+				outline: none
+			&:focus
+				outline: none

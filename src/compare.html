@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>compare</title>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="compare">
+		<div class="dots-block">
+			<img src="img/dots-num.png" alt="">
+			<img src="img/dots-num.png" alt="">
+		</div>
+		<div class="container">
+			<div class="compare-parallax">
+				<div class="compare-planet">
+					<img src="img/compare/planet.png" alt="Земля">
+					<div class="compare-country turk">Турция</div>
+					<div class="compare-country uzb">Узбекистан</div>
+					<div class="compare-country chi">Китай</div>
+				</div>				
+			</div>
+			<div class="compare-text">
+				<h1 class="compare-title">Когда сравнивают,<br/> выбирают нас</h1>
+				<div class="compare-items">
+					<div class="compare-item">
+						<div class="compare-item__title">
+							<img src="img/compare/bag.png" alt="Отсрочка и факторинг">
+							<div class="compare-item__text">Отсрочка <br> и факторинг</div>
+						</div>
+						<div class="compare-item__desc">
+							Работаем с НДС по договору <br> поставки. Помогаем клиентам <br> покупать и продавать больше
+						</div>
+					</div>
+					<div class="compare-item">
+						<div class="compare-item__title">
+							<img src="img/compare/man.png" alt="Офисы в странах производителей">
+							<div class="compare-item__text">Офисы в странах <br>производителей</div>
+						</div>
+						<div class="compare-item__desc">
+							Филиалы в Москве, Китае, Турции<br> и Узбекистане. Курируем<br> производство и проверяем качество
+						</div>
+					</div>
+					<div class="compare-item">
+						<div class="compare-item__title">
+							<img src="img/compare/pig.png" alt="Низкие цены">
+							<div class="compare-item__text">Низкие <br> цены</div>
+						</div>
+						<div class="compare-item__desc">
+							Наш приоритет — это низкая цена. <br> Для этого мы оптимизируем все <br> бизнес-процессы
+						</div>
+					</div>
+					<div class="compare-item">
+						<div class="compare-item__title">
+							<img src="img/compare/storage.png" alt="Постоянный товарный запас">
+							<div class="compare-item__text">Постоянный <br> товарный запас</div>
+						</div>
+						<div class="compare-item__desc">
+							Держим на складе в Москве <br> постоянный товарный, догружаем, <br> развозим по РЦ
+						</div>
+					</div>
+				</div>
+				<div class="compare-deliver">
+					<h3 class="deliver-header">Поставляем товары в торговые сети</h3>
+					<div class="deliver-brands">
+						<div class="deliver-brands__wrapper">
+							<img src="img/compare/wildberries1.png" alt="wildberries">
+							<img src="img/compare/globus.png" alt="globus">
+							<img src="img/compare/x5relailgroup.png" alt="x5relailgroup">
+							<img src="img/compare/магнит.png" alt="магнит">
+							<img src="img/compare/style.png" alt="style">
+							<img src="img/compare/диски.png" alt="диски">
+							<img src="img/compare/светофор.png" alt="светофор">
+							<img src="img/compare/лента.png" alt="лента">
+							<img src="img/compare/essen.png" alt="эссен">							
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	  <script src="slick/slick.min.js"></script>
+	  <script>
+	  	$(document).ready(function() {  		
+
+			  $slickBlue = false;
+			      function blueSlider(){    
+			          if($(window).width() < 991){
+			              if(!$slickBlue){
+			                  $(".compare-items").slick({
+			                  	arrows: false,
+			                  	centerMode: false,
+			                  	slidesToShow: 2,
+			                  	dots: true
+			                  });
+			                  $slickBlue = true;
+			              }
+			          } else if($(window).width() > 992){
+			              if($slickBlue){
+			                  $('.compare-items').slick('unslick');
+			                  $slickBlue = false;
+			              }
+			          }
+			      };
+
+			      $(document).ready(function(){
+			          blueSlider();
+			      });
+			      $(window).on('resize', function(){
+			           blueSlider();
+			      });
+
+			  	
+			  $slickGreen = false;
+			      function greenSlider(){    
+			          if($(window).width() < 991){
+			              if(!$slickGreen){
+			                  $(".deliver-brands__slider").slick({
+			                      dots: false,
+			                      arrows: false,
+			                      centerMode: true,
+			    									slidesToShow: 2
+			                  });
+			                  $slickGreen = true;
+			              }
+			          } else if($(window).width() > 992){
+			              if($slickGreen){
+			                  $('.deliver-brands__slider').slick('unslick');
+			                  $slickGreen = false;
+			              }
+			          }
+			      };
+
+			      $(document).ready(function(){
+			          greenSlider();
+			      });
+			      $(window).on('resize', function(){
+			           greenSlider();
+			      });
+
+	  	});
+
+
+	  	var parallax = (function() {
+	  		var bg = document.querySelector('.compare-planet');
+	  		var planet = document.querySelector('.compare');
+
+	  		return {
+	  			move: function(block, windowScroll, strafeAmount){
+	  				var strafe = windowScroll / strafeAmount + '%';
+	  				var transformString = 'translate3d(0,'+ strafe +',0)';
+
+	  				var style = block.style;
+
+	  				style.transform = transformString;
+	  				style.webkitTransform = transformString;
+	  			},
+
+	  			init: function (wScroll){
+	  				this.move(bg, wScroll*2, 10);
+	  			}
+	  		}
+
+	  	}());
+
+	  	window.onscroll = function(){
+	  		var wScroll = window.pageYOffset;
+
+	  		parallax.init(wScroll);
+	  	}
+	  </script>
+
+</body>
+</html>
